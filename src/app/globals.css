@@ -1,0 +1,538 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "react-slideshow-image/dist/styles.css";
+.cd::-webkit-scrollbar {
+  width: 4px;
+}
+
+@layer base {
+  .no-tailwindcss-base  h1, h2, h3, h4, h5, h6{
+      font-size: revert;
+      font-weight: revert;
+  }
+}
+
+
+
+.cd::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.form-control {
+ border: gray;
+  
+  height: 50px !important;
+  width: 100% !important;
+}
+
+.cd::-webkit-scrollbar-thumb {
+  background: #2b63e1;
+  border-radius: 5px;
+}
+
+/* custom-content-styles.css */
+
+/* Define specific styles for tables within the content */
+
+/*
+* For rendering images inserted using the image plugin.
+* Includes image captions using the HTML5 figure element.
+*/
+
+
+.custom-content html,
+.custom-content body,
+.custom-content div,
+.custom-content span,
+.custom-content applet,
+.custom-content object,
+.custom-content iframe,
+.custom-content h1,
+.custom-content h2,
+.custom-content h3,
+.custom-content h4,
+.custom-content h5,
+.custom-content h6,
+.custom-content p,
+.custom-content blockquote,
+.custom-content pre,
+.custom-content a,
+.custom-content abbr,
+.custom-content acronym,
+.custom-content address,
+.custom-content big,
+.custom-content cite,
+.custom-content code,
+.custom-content del,
+.custom-content dfn,
+.custom-content em,
+.custom-content img,
+.custom-content ins,
+.custom-content kbd,
+.custom-content q,
+.custom-content s,
+.custom-content samp,
+.custom-content small,
+.custom-content strike,
+.custom-content strong,
+.custom-content sub,
+.custom-content sup,
+.custom-content tt,
+.custom-content var,
+.custom-content b,
+.custom-content u,
+.custom-content i,
+.custom-content center,
+.custom-content dl,
+.custom-content dt,
+.custom-content dd,
+.custom-content ol,
+.custom-content ul,
+.custom-content li,
+.custom-content fieldset,
+.custom-content form,
+.custom-content label,
+.custom-content legend,
+.custom-content table,
+.custom-content caption,
+.custom-content tbody,
+.custom-content tfoot,
+.custom-content thead,
+.custom-content tr,
+.custom-content th,
+.custom-content td,
+.custom-content article,
+.custom-content aside,
+.custom-content canvas,
+.custom-content details,
+.custom-content embed,
+.custom-content figure,
+.custom-content figcaption,
+.custom-content footer,
+.custom-content header,
+.custom-content hgroup,
+.custom-content menu,
+.custom-content nav,
+.custom-content output,
+.custom-content ruby,
+.custom-content section,
+.custom-content summary,
+.custom-content time,
+.custom-content mark,
+.custom-content audio,
+.custom-content video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  .custom-content article,
+  .custom-content aside,
+  .custom-content details,
+  .custom-content figcaption,
+  .custom-content figure,
+  .custom-content footer,
+  .custom-content header,
+  .custom-content hgroup,
+  .custom-content menu,
+  .custom-content nav,
+  .custom-content section {
+    display: block;
+  }
+  .custom-content ol,
+  .custom-content ul {
+    list-style: none;
+  }
+  .custom-content blockquote,
+  .custom-content q {
+    quotes: none;
+  }
+  .custom-content blockquote:before,
+  .custom-content blockquote:after,
+  .custom-content q:before,
+  .custom-content q:after {
+    content: "";
+    content: none;
+  }
+.custom-content figure.image {
+  display: inline-block;
+  border: 1px solid gray;
+  margin: 0 2px 0 1px;
+  background: #f5f2f0;
+}
+
+.custom-content figure.align-left {
+  float: left;
+}
+
+.custom-content figure.align-right {
+  float: right;
+}
+
+.custom-content figure.image img {
+  margin: 8px 8px 0 8px;
+}
+
+.custom-content figure.image figcaption {
+  margin: 6px 8px 6px 8px;
+  text-align: center;
+}
+
+/*
+ Alignment using classes rather than inline styles
+ check out the "formats" option
+*/
+
+.custom-content img.align-left {
+  float: left;
+}
+
+.custom-content img.align-right {
+  float: right;
+}
+
+/*
+* Premium Plugins CSS
+*/
+
+/* The Table of Contents Plugin */
+
+.custom-content table {
+  min-width: 60%;
+  max-width: 100%;
+}
+
+.custom-content table,
+.custom-content th,
+.custom-content td {
+  border: 1px solid #000;
+  border-collapse: collapse;
+
+}
+
+.custom-content th,
+.custom-content td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: left;
+}
+
+
+.custom-content .mce-toc {
+  border: 1px solid gray;
+}
+
+.custom-content .mce-toc h2 {
+  margin: 4px;
+}
+
+.custom-content .mce-toc li {
+  list-style-type: none;
+}
+
+/* The Checklist Plugin */
+
+.custom-content .tox-checklist > li:not(.tox-checklist--hidden) {
+  list-style: none;
+  margin: 0.25em 0;
+  position: relative;
+}
+.custom-content .tox-checklist > li:not(.tox-checklist--hidden)::before {
+  content: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cg%20id%3D%22checklist-unchecked%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Crect%20id%3D%22Rectangle%22%20width%3D%2215%22%20height%3D%2215%22%20x%3D%22.5%22%20y%3D%22.5%22%20fill-rule%3D%22nonzero%22%20stroke%3D%22%234C4C4C%22%20rx%3D%222%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A");
+  cursor: pointer;
+  height: 1em;
+  margin-left: -1.5em;
+  margin-top: 0.125em;
+  position: absolute;
+  width: 1em;
+}
+.custom-content
+  .tox-checklist
+  li:not(.tox-checklist--hidden).tox-checklist--checked::before {
+  content: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cg%20id%3D%22checklist-checked%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Crect%20id%3D%22Rectangle%22%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%234099FF%22%20fill-rule%3D%22nonzero%22%20rx%3D%222%22%2F%3E%3Cpath%20id%3D%22Path%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22nonzero%22%20d%3D%22M11.5703186%2C3.14417309%20C11.8516238%2C2.73724603%2012.4164781%2C2.62829933%2012.83558%2C2.89774797%20C13.260121%2C3.17069355%2013.3759736%2C3.72932262%2013.0909105%2C4.14168582%20L7.7580587%2C11.8560195%20C7.43776896%2C12.3193404%206.76483983%2C12.3852142%206.35607322%2C11.9948725%20L3.02491697%2C8.8138662%20C2.66090143%2C8.46625845%202.65798871%2C7.89594698%203.01850234%2C7.54483354%20C3.373942%2C7.19866177%203.94940006%2C7.19592841%204.30829608%2C7.5386474%20L6.85276923%2C9.9684299%20L11.5703186%2C3.14417309%20Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A");
+}
+
+/* The Page Embed plugin */
+
+.custom-content .tiny-pageembed--21by9,
+.custom-content .tiny-pageembed--16by9,
+.custom-content .tiny-pageembed--4by3,
+.custom-content .tiny-pageembed--1by1 {
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.custom-content .tiny-pageembed--21by9 {
+  padding-top: 42.857143%;
+}
+
+.custom-content .tiny-pageembed--16by9 {
+  padding-top: 56.25%;
+}
+
+.custom-content .tiny-pageembed--4by3 {
+  padding-top: 75%;
+}
+
+.custom-content .tiny-pageembed--1by1 {
+  padding-top: 100%;
+}
+
+.custom-content .tiny-pageembed--21by9 iframe,
+.custom-content .tiny-pageembed--16by9 iframe,
+.custom-content .tiny-pageembed--4by3 iframe,
+.custom-content .tiny-pageembed--1by1 iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* The Media Embed plugin */
+
+.custom-content .ephox-summary-card {
+  border: 1px solid #aaa;
+  box-shadow:
+    0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  padding: 10px;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+
+.custom-content .ephox-summary-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.custom-content .custom-content .ephox-summary-card a:visited {
+  color: inherit;
+}
+
+.custom-content .ephox-summary-card-title {
+  font-size: 1.2em;
+  display: block;
+}
+
+.custom-content .ephox-summary-card-author {
+  color: #999;
+  display: block;
+  margin-top: 0.5em;
+}
+
+.custom-content .ephox-summary-card-website {
+  color: #999;
+  display: block;
+  margin-top: 0.5em;
+}
+
+.custom-content .ephox-summary-card-thumbnail {
+  max-width: 180px;
+  max-height: 180px;
+  margin-left: 2em;
+  float: right;
+}
+
+.custom-content .ephox-summary-card-description {
+  margin-top: 0.5em;
+  display: block;
+}
+
+/* The Footnotes plugin */
+
+.custom-content div.mce-footnotes hr {
+  margin-inline-end: auto;
+  margin-inline-start: 0;
+  width: 25%;
+}
+
+.custom-content div.mce-footnotes li > a.mce-footnotes-backlink {
+  text-decoration: none;
+}
+
+@media print {
+  .custom-content sup.mce-footnote a {
+    color: black;
+    text-decoration: none;
+  }
+  .custom-content div.mce-footnotes {
+    break-inside: avoid;
+    width: 100%;
+  }
+  .custom-content div.mce-footnotes li > a.mce-footnotes-backlink {
+    display: none;
+  }
+}
+
+.custom-content {
+  /* Define your custom styles for the content */
+  
+  line-height: 1.5;
+
+  /* Apply styles to control overflow */
+  overflow: auto; /* or overflow: hidden; or overflow: scroll; */
+  max-height: 80%; /* Set a maximum height for the container */
+}
+
+.custom-content p {
+  display: block !important;
+}
+
+.custom-content blockquote {
+  border-left: 4px solid #666 !important;
+  padding-left: 10px !important;
+  font-style: italic !important;
+  /* Add any other custom styles you want */
+}
+
+.custom-content ul {
+  /* description */
+  display: block !important;
+  margin-block-start: 1em !important;
+  margin-block-end: 1em !important;
+  padding-inline-start: 40px !important;
+  list-style-type: disc !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
+  counter-reset: list-item !important;
+  list-style-image: none !important;
+  list-style-position: outside !important;
+  margin: 1em 0 !important;
+  padding: 0 0 0 30pt !important;
+}
+
+.custom-content ol {
+  /* description */
+  display: block !important;
+  margin-block-start: 1em !important;
+  margin-block-end: 1em !important;
+  padding-inline-start: 40px !important;
+  list-style-type: decimal !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
+  counter-reset: list-item !important;
+  list-style-image: none !important;
+  list-style-position: outside !important;
+  margin: 1em 0 !important;
+  padding: 0 0 0 30pt !important;
+}
+
+.custom-content b {
+  font-weight: bolder !important;
+}
+
+.custom-content i {
+  font-style: italic !important;
+}
+
+.custom-content h1 {
+  display: block !important;
+  font-weight: bold !important;
+  font-size: 2em !important;
+  margin-block-start: 0.67em !important;
+  margin-block-end: 0.67em !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
+}
+.custom-content h2 {
+  display: block !important;
+  font-weight: bold !important;
+  font-size: 1.5em !important;
+  margin-block-start: 0.83em !important;
+  margin-block-end: 0.83em !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
+}
+.custom-content h3 {
+  display: block !important;
+  font-weight: bold !important;
+  font-size: 1.17em !important;
+  margin-block-start: 1em !important;
+  margin-block-end: 1em !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
+}
+.custom-content h6 {
+  display: block !important;
+  font-weight: bold !important;
+  font-size: 0.67em !important;
+  margin-block-start: 2.33em !important;
+  margin-block-end: 2.33em !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
+}
+
+.custom-content u {
+  text-decoration: underline !important;
+}
+.custom-content a {
+  color: #0000EE !important;
+  text-decoration: underline !important;
+  cursor: pointer !important;
+}
+.custom-content a:active {
+  color: #FF0000 !important;
+}
+.custom-content a:visited {
+  color: #551A8B !important;
+}
+.custom-content pre {
+  border-radius: 0.5rem !important;
+  padding: 1rem !important;
+  font-family: monospace !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  overflow-x: auto !important;
+  /* Add any other custom styles you want */
+}
+
+.custom-content code {
+  margin: 0;
+  white-space: pre-wrap;
+
+}
+
+.content-custom .alignleft {
+    float: left;
+    margin: 0 1em 0 0;
+}
+.content-custom .ytp-cued-thumbnail-overlay-image {
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.content-custom .html5-video-player {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    outline: 0;
+    font-family: "YouTube Noto",Roboto,Arial,Helvetica,sans-serif;
+    color: #eee;
+    text-align: left;
+    direction: ltr;
+    font-size: 11px;
+    line-height: 1.3;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    touch-action: manipulation;
+    -ms-high-contrast-adjust: none;
+}
